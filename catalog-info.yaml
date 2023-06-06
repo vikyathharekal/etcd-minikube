@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: etcd-minikube
+  annotations:
+    backstage.io/kubernetes-label-selector: 'component=etcd'
+    backstage.io/kubernetes-namespace: 'kube-system'    
+  tags:
+    - java
+spec:
+  type: service
+  lifecycle: prod
+  owner: cloud-engineering
+  system: kube-system
